@@ -129,7 +129,7 @@ public class APIExample {
             throw new APIExampleException("Error: get user products");
         }
 
-        List<UserPurchase> userPurchases = purchasesController.userPurchasesGetAllUserPurchases(userId, 1, 15, true).getResult();
+        List<UserPurchase> userPurchases = purchasesController.userPurchasesGetAllUserPurchases(userId, 1, 15, null, null, null, null, true).getResult();
         if (userPurchases.size() == 0)
         {
             throw new APIExampleException("Error: get all user purchases");

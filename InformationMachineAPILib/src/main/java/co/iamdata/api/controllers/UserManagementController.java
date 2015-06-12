@@ -60,7 +60,7 @@ public class UserManagementController extends BaseController {
 
         //process optional query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5751795682365401646L;
+            private static final long serialVersionUID = 4689856944630481482L;
             {
                     put( "page", page );
                     put( "per_page", perPage );
@@ -73,7 +73,7 @@ public class UserManagementController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5080017475582475868L;
+            private static final long serialVersionUID = 4722997137858191245L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -105,7 +105,7 @@ public class UserManagementController extends BaseController {
     }
         
     /**
-     * Register a new user by specifying "email", "zip" and "user_id". The “user_id” is mandatory and it represents the identifier you will use to identify your user in the IM API infrastructure.Note: The following characters are restricted within "user_id" string ---&gt; { '/', '^', '[',  '\\', 'w', '.', ']', '+', '$', '/' }
+     * Register a new user by specifying "email", "zip" and "user_id". The "user_id" is mandatory and it represents the identifier you will use to identify your user in the IM API infrastructure.Note: The following characters are restricted within "user_id" string ---&gt; { '/', '^', '[',  '\\', 'w', '.', ']', '+', '$', '/' }
      * @param    payload    Required parameter: TODO: type description here
 	 * @return	Returns the CreateUserWrapper response from the API call*/
     public CreateUserWrapper userManagementCreateUser(
@@ -120,7 +120,7 @@ public class UserManagementController extends BaseController {
 
         //process optional query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4882104293958296313L;
+            private static final long serialVersionUID = 5656861362402636215L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -131,7 +131,7 @@ public class UserManagementController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5359177825510715532L;
+            private static final long serialVersionUID = 4963988469061538354L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -185,7 +185,7 @@ public class UserManagementController extends BaseController {
 
         //process optional query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5430976412542114775L;
+            private static final long serialVersionUID = 5720932056845779223L;
             {
                     put( "id", id );
                     put( "client_id", clientId );
@@ -197,7 +197,7 @@ public class UserManagementController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4816264522504147397L;
+            private static final long serialVersionUID = 4922284813966625021L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -229,7 +229,7 @@ public class UserManagementController extends BaseController {
     }
         
     /**
-     * Get user associated with your account specifying “id” of a user.
+     * Get user associated with your account specifying "id" of a user.
      * @param    id    Required parameter: TODO: type description here
 	 * @return	Returns the GetSingleUserWrapper response from the API call*/
     public GetSingleUserWrapper userManagementGetSingleUser(
@@ -244,14 +244,14 @@ public class UserManagementController extends BaseController {
 
         //process optional query parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5316030437088280580L;
+            private static final long serialVersionUID = 5699685600695274821L;
             {
                     put( "id", id );
             }});
 
         //process optional query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4722184682345297500L;
+            private static final long serialVersionUID = 5700602306682839757L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -262,7 +262,7 @@ public class UserManagementController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4939630708798637598L;
+            private static final long serialVersionUID = 4935833564727114227L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
