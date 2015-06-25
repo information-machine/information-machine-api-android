@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class ProductData 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4737807778780827102L;
+    private static final long serialVersionUID = 4879885384777728596L;
     private List<NutrientData> nutrients;
     private List<String> recipes;
     private Integer visibilityCount;

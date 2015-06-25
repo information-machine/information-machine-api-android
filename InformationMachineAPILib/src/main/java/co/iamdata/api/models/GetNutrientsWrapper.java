@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class GetNutrientsWrapper 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5294457384564827974L;
+    private static final long serialVersionUID = 4797441268705677691L;
     private List<NutrientInfo> result;
     private MetaBase meta;
     /** GETTER

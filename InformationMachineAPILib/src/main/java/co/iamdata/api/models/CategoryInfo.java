@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class CategoryInfo 
         implements java.io.Serializable {
-	private static final long serialVersionUID = 5542645026160335194L;
+    private static final long serialVersionUID = 5304902947950565859L;
     private Integer id;
     private String name;
     private Integer parentId;

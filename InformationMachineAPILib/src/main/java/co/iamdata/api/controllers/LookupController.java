@@ -53,9 +53,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/product_alternative_types");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4971843594243692446L;
+            private static final long serialVersionUID = 5155410900711813615L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -66,7 +66,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5747292516744380889L;
+            private static final long serialVersionUID = 5404523080302368524L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -109,9 +109,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/units_of_measurement");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5383080287284763819L;
+            private static final long serialVersionUID = 4768487545143815082L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -122,7 +122,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5568354671383920984L;
+            private static final long serialVersionUID = 5056970883281887899L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -165,9 +165,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/categories");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5736418013308115698L;
+            private static final long serialVersionUID = 4746679081459597149L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -178,7 +178,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5663612619222712385L;
+            private static final long serialVersionUID = 5753714835466073755L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -221,9 +221,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/nutrients");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4705675067775807759L;
+            private static final long serialVersionUID = 4706116748141075431L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -234,7 +234,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5152194721710709740L;
+            private static final long serialVersionUID = 4647238905908167160L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -277,9 +277,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/stores");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4656861146486537993L;
+            private static final long serialVersionUID = 5554829008308799551L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -290,7 +290,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5117045895664136498L;
+            private static final long serialVersionUID = 4682598696390529486L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -333,9 +333,9 @@ public class LookupController extends BaseController {
         StringBuilder queryBuilder = new StringBuilder(baseUri);
         queryBuilder.append("/v1/tags");
 
-        //process optional query parameters
+        //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5165810251196993639L;
+            private static final long serialVersionUID = 5245278505319044649L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -346,7 +346,7 @@ public class LookupController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5091926473812819188L;
+            private static final long serialVersionUID = 5053588552661353626L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
