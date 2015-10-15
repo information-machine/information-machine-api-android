@@ -5,12 +5,13 @@
  */
 package co.iamdata.api.models;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class UploadBarcodeRequest 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4935621408838263628L;
+    private static final long serialVersionUID = 4984646815654699126L;
     private String barCode;
     private String barCodeType;
     /** GETTER

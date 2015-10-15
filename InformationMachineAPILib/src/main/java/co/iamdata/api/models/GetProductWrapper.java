@@ -5,30 +5,15 @@
  */
 package co.iamdata.api.models;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class GetProductWrapper 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5383516320374409326L;
-    private ProductData result;
+    private static final long serialVersionUID = 5145892435277569250L;
     private MetaBase meta;
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("result")
-    public ProductData getResult ( ) { 
-        return this.result;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("result")
-    public void setResult (ProductData value) { 
-        this.result = value;
-    }
- 
+    private ProductData result;
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -43,6 +28,22 @@ public class GetProductWrapper
     @JsonSetter("meta")
     public void setMeta (MetaBase value) { 
         this.meta = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("result")
+    public ProductData getResult ( ) { 
+        return this.result;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("result")
+    public void setResult (ProductData value) { 
+        this.result = value;
     }
  
 }

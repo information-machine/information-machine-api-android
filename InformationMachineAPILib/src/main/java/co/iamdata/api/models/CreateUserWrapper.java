@@ -5,30 +5,15 @@
  */
 package co.iamdata.api.models;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class CreateUserWrapper 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5294955671313860747L;
-    private RegisterUserResponse result;
+    private static final long serialVersionUID = 5685643895218268466L;
     private MetaBase meta;
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("result")
-    public RegisterUserResponse getResult ( ) { 
-        return this.result;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("result")
-    public void setResult (RegisterUserResponse value) { 
-        this.result = value;
-    }
- 
+    private RegisterUserResponse result;
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -43,6 +28,22 @@ public class CreateUserWrapper
     @JsonSetter("meta")
     public void setMeta (MetaBase value) { 
         this.meta = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("result")
+    public RegisterUserResponse getResult ( ) { 
+        return this.result;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("result")
+    public void setResult (RegisterUserResponse value) { 
+        this.result = value;
     }
  
 }

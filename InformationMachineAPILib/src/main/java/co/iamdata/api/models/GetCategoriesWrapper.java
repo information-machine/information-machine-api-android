@@ -5,31 +5,15 @@
  */
 package co.iamdata.api.models;
 
-import java.util.List;
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class GetCategoriesWrapper 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5200917793332514447L;
-    private List<CategoryInfo> result;
+    private static final long serialVersionUID = 5035686732417364565L;
     private MetaBase meta;
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("result")
-    public List<CategoryInfo> getResult ( ) { 
-        return this.result;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("result")
-    public void setResult (List<CategoryInfo> value) { 
-        this.result = value;
-    }
- 
+    private List<CategoryInfo> result;
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -44,6 +28,22 @@ public class GetCategoriesWrapper
     @JsonSetter("meta")
     public void setMeta (MetaBase value) { 
         this.meta = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("result")
+    public List<CategoryInfo> getResult ( ) { 
+        return this.result;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("result")
+    public void setResult (List<CategoryInfo> value) { 
+        this.result = value;
     }
  
 }

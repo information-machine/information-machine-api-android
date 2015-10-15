@@ -5,15 +5,16 @@
  */
 package co.iamdata.api.models;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class RegisterUserRequest 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5121785252052345535L;
+    private static final long serialVersionUID = 4714811774529699599L;
     private String email;
-    private String zip;
     private String userId;
+    private String zip;
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -33,22 +34,6 @@ public class RegisterUserRequest
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("zip")
-    public String getZip ( ) { 
-        return this.zip;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("zip")
-    public void setZip (String value) { 
-        this.zip = value;
-    }
- 
-    /** GETTER
-     * TODO: Write general description for this method
-     */
     @JsonGetter("user_id")
     public String getUserId ( ) { 
         return this.userId;
@@ -60,6 +45,22 @@ public class RegisterUserRequest
     @JsonSetter("user_id")
     public void setUserId (String value) { 
         this.userId = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("zip")
+    public String getZip ( ) { 
+        return this.zip;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("zip")
+    public void setZip (String value) { 
+        this.zip = value;
     }
  
 }

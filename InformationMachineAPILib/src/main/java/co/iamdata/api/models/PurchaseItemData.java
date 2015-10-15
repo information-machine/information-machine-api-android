@@ -5,21 +5,39 @@
  */
 package co.iamdata.api.models;
 
+import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class PurchaseItemData 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5200936575511784576L;
-    private Integer id;
-    private Integer purchaseId;
-    private String name;
-    private Double quantity;
-    private Double price;
+    private static final long serialVersionUID = 4915581672196825353L;
     private Double discountedPrice;
+    private Integer id;
+    private String name;
+    private Double price;
+    private PurchaseItemProduct product;
+    private Integer purchaseId;
+    private Double quantity;
     private String unitOfMeasurement;
     private String upc;
-    private PurchaseItemProduct product;
+    private String upcResolvedAt;
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("discounted_price")
+    public Double getDiscountedPrice ( ) { 
+        return this.discountedPrice;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("discounted_price")
+    public void setDiscountedPrice (Double value) { 
+        this.discountedPrice = value;
+    }
+ 
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -34,22 +52,6 @@ public class PurchaseItemData
     @JsonSetter("id")
     public void setId (Integer value) { 
         this.id = value;
-    }
- 
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("purchase_id")
-    public Integer getPurchaseId ( ) { 
-        return this.purchaseId;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("purchase_id")
-    public void setPurchaseId (Integer value) { 
-        this.purchaseId = value;
     }
  
     /** GETTER
@@ -71,22 +73,6 @@ public class PurchaseItemData
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("quantity")
-    public Double getQuantity ( ) { 
-        return this.quantity;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("quantity")
-    public void setQuantity (Double value) { 
-        this.quantity = value;
-    }
- 
-    /** GETTER
-     * TODO: Write general description for this method
-     */
     @JsonGetter("price")
     public Double getPrice ( ) { 
         return this.price;
@@ -103,17 +89,49 @@ public class PurchaseItemData
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("discounted_price")
-    public Double getDiscountedPrice ( ) { 
-        return this.discountedPrice;
+    @JsonGetter("product")
+    public PurchaseItemProduct getProduct ( ) { 
+        return this.product;
     }
     
     /** SETTER
      * TODO: Write general description for this method
      */
-    @JsonSetter("discounted_price")
-    public void setDiscountedPrice (Double value) { 
-        this.discountedPrice = value;
+    @JsonSetter("product")
+    public void setProduct (PurchaseItemProduct value) { 
+        this.product = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("purchase_id")
+    public Integer getPurchaseId ( ) { 
+        return this.purchaseId;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("purchase_id")
+    public void setPurchaseId (Integer value) { 
+        this.purchaseId = value;
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("quantity")
+    public Double getQuantity ( ) { 
+        return this.quantity;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("quantity")
+    public void setQuantity (Double value) { 
+        this.quantity = value;
     }
  
     /** GETTER
@@ -151,17 +169,17 @@ public class PurchaseItemData
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("product")
-    public PurchaseItemProduct getProduct ( ) { 
-        return this.product;
+    @JsonGetter("upc_resolved_at")
+    public String getUpcResolvedAt ( ) { 
+        return this.upcResolvedAt;
     }
     
     /** SETTER
      * TODO: Write general description for this method
      */
-    @JsonSetter("product")
-    public void setProduct (PurchaseItemProduct value) { 
-        this.product = value;
+    @JsonSetter("upc_resolved_at")
+    public void setUpcResolvedAt (String value) { 
+        this.upcResolvedAt = value;
     }
  
 }

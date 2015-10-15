@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 import co.iamdata.api.http.client.HttpClient;
+
 import co.iamdata.api.http.request.HttpRequest;
 import co.iamdata.api.http.response.HttpResponse;
 import co.iamdata.api.http.response.HttpStringResponse;
@@ -62,14 +63,14 @@ public class UserStoresController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5391791489607348809L;
+            private static final long serialVersionUID = 5327251240316925424L;
             {
                     put( "user_id", userId );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5572334783560710664L;
+            private static final long serialVersionUID = 5301434042699804996L;
             {
                     put( "page", page );
                     put( "per_page", perPage );
@@ -82,7 +83,7 @@ public class UserStoresController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4941699299055894196L;
+            private static final long serialVersionUID = 5345022792891537381L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -114,7 +115,7 @@ public class UserStoresController extends BaseController {
     }
         
     /**
-     * Connect a user's store by specifying the user ID ("user_id"), store ID ("store_id") and user's credentials for specified store ("username" and "password"). Note: Within response you should focus on the following properties: "scrape_status" and "credentials_status". Possible values for "scrape_status": "Not defined""Pending" - (scraping request is in queue and waiting to be processed)"Scraping" - (scraping is in progress)"Done" - (scraping is finished)"Done With Warning" - (not all purchases were scraped)Possible values for "credentials_status":"Not defined""Verified" - (scraping bots are able to log in to store site)"Invalid" - (supplied user name or password are not valid)"Unknown" - (user name or password are not know)"Checking" - (credentials verification is in progress)
+     * Connect a user's store by specifying the user ID ("user_id"), store ID ("store_id") and user's credentials for specified store ("username" and "password"). You can find store IDs in Lookup/Stores section above or in this <a href="http://api.iamdata.co/docs/storeids" target="blank">LINK</a>. Note: Within response you should focus on the following properties: "scrape_status" and "credentials_status". Possible values for "scrape_status": "Not defined""Pending" - (scraping request is in queue and waiting to be processed)"Scraping" - (scraping is in progress)"Done" - (scraping is finished)"Done With Warning" - (not all purchases were scraped)Possible values for "credentials_status":"Not defined""Verified" - (scraping bots are able to log in to store site)"Invalid" - (supplied user name or password are not valid)"Unknown" - (user name or password are not know)"Checking" - (credentials verification is in progress)
      * @param    payload    Required parameter: TODO: type description here
      * @param    userId    Required parameter: TODO: type description here
 	 * @return	Returns the ConnectStoreWrapper response from the API call*/
@@ -131,14 +132,14 @@ public class UserStoresController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5336741023694156601L;
+            private static final long serialVersionUID = 5602654948247165369L;
             {
                     put( "user_id", userId );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5638509299554939355L;
+            private static final long serialVersionUID = 4994470403401509031L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -149,7 +150,7 @@ public class UserStoresController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5413244018094521426L;
+            private static final long serialVersionUID = 5555839475238715768L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -188,7 +189,7 @@ public class UserStoresController extends BaseController {
     }
         
     /**
-     * Get single store connection by specifying user ("user_id") and store connection ID ("user_store_id" - generated upon successful store connection). Note: Within response focus on the following properties: "scrape_status" and "credentials_status". Possible values for "scrape_status": "Not defined""Pending" - (scraping request is in queue and waiting to be processed)"Scraping" - (scraping is in progress)"Done" - (scraping is finished)"Done With Warning" - (not all purchases were scraped)Possible values for "credentials_status":"Not defined""Verified" - (scraping bots are able to log in to store site)"Invalid" - (supplied user name or password are not valid)"Unknown" - (user name or password are not know)"Checking" - (credentials verification is in progress)
+     * Get single store connection by specifying user ("user_id") and store connection ID ("id" - generated upon successful store connection). Note: Within response focus on the following properties: "scrape_status" and "credentials_status". Possible values for "scrape_status": "Not defined""Pending" - (scraping request is in queue and waiting to be processed)"Scraping" - (scraping is in progress)"Done" - (scraping is finished)"Done With Warning" - (not all purchases were scraped)Possible values for "credentials_status":"Not defined""Verified" - (scraping bots are able to log in to store site)"Invalid" - (supplied user name or password are not valid)"Unknown" - (user name or password are not know)"Checking" - (credentials verification is in progress)
      * @param    userId    Required parameter: TODO: type description here
      * @param    id    Required parameter: TODO: type description here
 	 * @return	Returns the GetSingleStoresWrapper response from the API call*/
@@ -205,7 +206,7 @@ public class UserStoresController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5061214154500753598L;
+            private static final long serialVersionUID = 5197055930355959136L;
             {
                     put( "user_id", userId );
                     put( "id", id );
@@ -213,7 +214,7 @@ public class UserStoresController extends BaseController {
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4731410978793229721L;
+            private static final long serialVersionUID = 5098391165902095339L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -224,7 +225,7 @@ public class UserStoresController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4702868202033799106L;
+            private static final long serialVersionUID = 5519438289897530178L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -275,7 +276,7 @@ public class UserStoresController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5727176172444551163L;
+            private static final long serialVersionUID = 5033642557448588463L;
             {
                     put( "user_id", userId );
                     put( "id", id );
@@ -283,7 +284,7 @@ public class UserStoresController extends BaseController {
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5383028809807639961L;
+            private static final long serialVersionUID = 5327007935922035773L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -294,7 +295,7 @@ public class UserStoresController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5273449278908269885L;
+            private static final long serialVersionUID = 5147910236201269542L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
@@ -347,7 +348,7 @@ public class UserStoresController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4916058502984548608L;
+            private static final long serialVersionUID = 4858332727402453546L;
             {
                     put( "user_id", userId );
                     put( "id", id );
@@ -355,7 +356,7 @@ public class UserStoresController extends BaseController {
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5272849004154111965L;
+            private static final long serialVersionUID = 5365741676303001189L;
             {
                     put( "client_id", clientId );
                     put( "client_secret", clientSecret );
@@ -366,7 +367,7 @@ public class UserStoresController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5481198626813552727L;
+            private static final long serialVersionUID = 5258941876650834643L;
             {
                     put( "user-agent", "IAMDATA V1" );
                     put( "accept", "application/json" );
