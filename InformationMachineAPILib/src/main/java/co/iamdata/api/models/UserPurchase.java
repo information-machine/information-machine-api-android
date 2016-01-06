@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class UserPurchase 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5169769988523256269L;
+    private static final long serialVersionUID = 5172307608518895349L;
     private String date;
     private Integer id;
     private String orderNumber;

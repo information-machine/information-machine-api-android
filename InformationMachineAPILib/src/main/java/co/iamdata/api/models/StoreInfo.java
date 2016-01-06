@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class StoreInfo 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5643915538198853716L;
+    private static final long serialVersionUID = 4714743833876019007L;
     private Boolean canScrape;
     private Integer id;
     private String imageLink;

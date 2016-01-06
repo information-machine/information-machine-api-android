@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class UOMInfo 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5719107122895343135L;
+    private static final long serialVersionUID = 5159838457607132939L;
     private String description;
     private Integer id;
     private String name;

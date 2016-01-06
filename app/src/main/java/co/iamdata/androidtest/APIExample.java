@@ -36,8 +36,8 @@ public class APIExample {
             clientId = bundle.getString("clientid");
             clientSecret = bundle.getString("clientsecret");
             supermarketName = bundle.getString("supermarketname");
-            username = bundle.getString("username");;
-            password = bundle.getString("password");;
+            username = bundle.getString("username");
+            password = bundle.getString("password");
         }
         catch (Exception ex){
             throw new IllegalStateException("Unable to initialize", ex);
@@ -97,7 +97,7 @@ public class APIExample {
         storeConnect.setUsername(username);
         storeConnect.setPassword(password);
 
-        ConnectUserStoreResponse userStore = storesController.userStoresConnectStore(storeConnect, userId).getResult();
+        UserStore userStore = storesController.userStoresConnectStore(storeConnect, userId).getResult();
 
         Boolean storeConnectionValid = checkStoreValidity(storesController, userId, userStore.getId());
         if (!storeConnectionValid)
@@ -105,12 +105,6 @@ public class APIExample {
             storesController.userStoresDeleteSingleStore(userId, userStore.getId());
             throw new APIExampleException("Error: could not connect to store");
         }
-
-        UpdateUserStoreRequest updateUserStoreRequest = new UpdateUserStoreRequest();
-        updateUserStoreRequest.setUsername(username);
-        updateUserStoreRequest.setPassword(password);
-
-        storesController.userStoresUpdateStoreConnection(updateUserStoreRequest, userId, userStore.getId());
 
         if (!waitForScrapeToFinish(storesController, userId, userStore.getId()))
         {
@@ -129,10 +123,16 @@ public class APIExample {
             throw new APIExampleException("Error: get user products");
         }
 
-        List<UserPurchase> userPurchases = purchasesController.userPurchasesGetAllUserPurchases(userId, null, 1, 15, null, null, null, null, null, null, null, null, true, null, null, null).getResult();
+        List<UserPurchase> userPurchases = purchasesController.userPurchasesGetAllUserPurchases(userId, null, 1, 15, null, null, null, null, null, null, null, null, true, null, null, null, null).getResult();
         if (userPurchases.size() == 0)
         {
             throw new APIExampleException("Error: get all user purchases");
+        }
+
+        PurchaseData purchaseHistory = purchasesController.userPurchasesGetPurchaseHistoryUnified(userId, null, null, null, null, null, null).getResult();
+        if (purchaseHistory.getPurchasedItems().size() == 0)
+        {
+            throw new APIExampleException("Error: get purchase history");
         }
 
         UserPurchase userPurchase = purchasesController.userPurchasesGetSingleUserPurchase(userId, userPurchases.get(0).getId().toString(), true).getResult();
@@ -164,8 +164,9 @@ public class APIExample {
             GetSingleStoresWrapper connectedStore = storesController.userStoresGetSingleStore(
                     userIdentifier, storeId);
 
-            if (connectedStore != null
-                    && connectedStore.getResult().getScrapeStatus().equals("Done")) {
+            if (connectedStore != null &&
+                    (connectedStore.getResult().getScrapeStatus().equals("Done") ||
+                            connectedStore.getResult().getScrapeStatus().equals("Done With Warning"))) {
                 return true;
             }
 
@@ -182,13 +183,15 @@ public class APIExample {
             GetSingleStoresWrapper connectedStore = storesController.userStoresGetSingleStore(
                     userIdentifier, storeId);
 
-            if (connectedStore != null){
+            if (connectedStore != null &&
+                    (connectedStore.getResult().getScrapeStatus().equals("Done") ||
+                            connectedStore.getResult().getScrapeStatus().equals("Done With Warning") ||
+                            connectedStore.getResult().getScrapeStatus().equals("Scraping"))){
                 if(connectedStore.getResult().getCredentialsStatus().equals("Verified")) {
                     return true;
                 }
-                if(connectedStore.getResult().getCredentialsStatus().equals("Invalid")) {
-                    return false;
-                }
+
+                return false;
             }
 
             Thread.sleep(3000);
