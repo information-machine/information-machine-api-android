@@ -166,7 +166,7 @@ public class APIExample {
 
             if (connectedStore != null &&
                     (connectedStore.getResult().getScrapeStatus().equals("Done") ||
-                            connectedStore.getResult().getScrapeStatus().equals("Done With Warning"))) {
+                            connectedStore.getResult().getScrapeStatus().equals("DoneWithWarning"))) {
                 return true;
             }
 
@@ -185,7 +185,7 @@ public class APIExample {
 
             if (connectedStore != null &&
                     (connectedStore.getResult().getScrapeStatus().equals("Done") ||
-                            connectedStore.getResult().getScrapeStatus().equals("Done With Warning") ||
+                            connectedStore.getResult().getScrapeStatus().equals("DoneWithWarning") ||
                             connectedStore.getResult().getScrapeStatus().equals("Scraping"))){
                 if(connectedStore.getResult().getCredentialsStatus().equals("Verified")) {
                     return true;
